@@ -1,0 +1,16 @@
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\bin\Debug\net472\ProfanityFilterAddon.dll
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\bin\Debug\net472\ProfanityFilterAddon.pdb
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\bin\Debug\net472\Microsoft.ML.OnnxRuntime.dll
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\bin\Debug\net472\Newtonsoft.Json.dll
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\bin\Debug\net472\System.Buffers.dll
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\bin\Debug\net472\System.Memory.dll
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\bin\Debug\net472\System.Numerics.Vectors.dll
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\bin\Debug\net472\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\obj\Debug\net472\ProfanityFilterAddon.csproj.AssemblyReference.cache
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\obj\Debug\net472\ProfanityFilterAddon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\obj\Debug\net472\ProfanityFilterAddon.AssemblyInfoInputs.cache
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\obj\Debug\net472\ProfanityFilterAddon.AssemblyInfo.cs
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\obj\Debug\net472\ProfanityFilterAddon.csproj.CoreCompileInputs.cache
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\obj\Debug\net472\Profanit.87C783B3.Up2Date
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\obj\Debug\net472\ProfanityFilterAddon.dll
+C:\Users\Liparakis\Desktop\ProfanityFilterAddon\ProfanityFilterAddon\obj\Debug\net472\ProfanityFilterAddon.pdb

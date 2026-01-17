@@ -1,0 +1,10 @@
+C:\Users\Liparakis\Desktop\ProfanityFilter\ProfanityAddon\bin\Release\netstandard2.1\ProfanityAddon.deps.json
+C:\Users\Liparakis\Desktop\ProfanityFilter\ProfanityAddon\bin\Release\netstandard2.1\ProfanityAddon.dll
+C:\Users\Liparakis\Desktop\ProfanityFilter\ProfanityAddon\bin\Release\netstandard2.1\ProfanityAddon.pdb
+C:\Users\Liparakis\Desktop\ProfanityFilter\ProfanityAddon\obj\Release\netstandard2.1\ProfanityAddon.csproj.AssemblyReference.cache
+C:\Users\Liparakis\Desktop\ProfanityFilter\ProfanityAddon\obj\Release\netstandard2.1\ProfanityAddon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Liparakis\Desktop\ProfanityFilter\ProfanityAddon\obj\Release\netstandard2.1\ProfanityAddon.AssemblyInfoInputs.cache
+C:\Users\Liparakis\Desktop\ProfanityFilter\ProfanityAddon\obj\Release\netstandard2.1\ProfanityAddon.AssemblyInfo.cs
+C:\Users\Liparakis\Desktop\ProfanityFilter\ProfanityAddon\obj\Release\netstandard2.1\ProfanityAddon.csproj.CoreCompileInputs.cache
+C:\Users\Liparakis\Desktop\ProfanityFilter\ProfanityAddon\obj\Release\netstandard2.1\ProfanityAddon.dll
+C:\Users\Liparakis\Desktop\ProfanityFilter\ProfanityAddon\obj\Release\netstandard2.1\ProfanityAddon.pdb
