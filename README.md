@@ -23,7 +23,7 @@ The current version utilizes a **High-Performance Rule-Based Engine**. It employ
 This ensures extremely fast processing times, making it ideal for real-time chat moderation on busy servers.
 
 ### 🔮 Future Roadmap
-We are planning to introduce a **Transformer-based Language Model (LLM)** in future versions. This upgrade will provide:
+I am planning to introduce a **Transformer-based Language Model (LLM)** in future versions. This upgrade will provide:
 - **Deep Contexual Understanding**: Detecting toxicity based on sentiment and intent rather than just keywords.
 - **Sarcasm Detection**: Better handling of nuanced communication.
 - **Adaptive Filtering**: Learning from server-specific chat patterns.
@@ -38,7 +38,7 @@ We are planning to introduce a **Transformer-based Language Model (LLM)** in fut
 ## 📥 Installation
 
 1. Download the latest release from the [Releases Page](https://github.com/diamondpixel/ProfanityFilterAddon/releases).
-2. Place the `ProfanityFilterAddon.dll` into your server's `Addons` or `Mods` folder.
+2. Place the `ProfanityFilterAddon.dll` into your server's `plugins` folder or install with Lumafly for HollowKnight.
 3. Restart the server.
 
 ## 🛠️ Configuration
