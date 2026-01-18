@@ -8,23 +8,36 @@ namespace ProfanityFilterAddon {
     /// Profanity Filter addon for SSMP.
     /// </summary>
     public class SSMPAddon : ServerAddon {
+        /// <inheritdoc />
         protected override string Name => "Profanity Filter";
+        
+        /// <inheritdoc />
         protected override string Version => "1.0.0";
+        
+        /// <inheritdoc />
         public override bool NeedsNetwork => false;
+        
+        /// <inheritdoc />
         public override uint ApiVersion => 1;
 
+        /// <inheritdoc />
         public override void Initialize(IServerApi serverApi) {
             Logger.Info("[ProfanityFilterAddon] SSMP Addon initialized.");
             serverApi.ServerManager.PlayerChatEvent += OnPlayerChat;
         }
 
+        /// <summary>
+        /// Event handler for player chat messages.
+        /// Filters profanity from the message content.
+        /// </summary>
+        /// <param name="chatEvent">The chat event arguments.</param>
         private void OnPlayerChat(IPlayerChatEvent chatEvent) {
             var original = chatEvent.Message;
             var sanitized = ProfanityFilter.Sanitize(original);
             
             if (!string.Equals(sanitized, original, StringComparison.Ordinal)) {
                 chatEvent.Message = sanitized;
-                Logger.Info("[ProfanityAddon] Filtered message.");
+                Logger.Info("[ProfanityFilterAddon] Filtered message.");
             }
         }
     }

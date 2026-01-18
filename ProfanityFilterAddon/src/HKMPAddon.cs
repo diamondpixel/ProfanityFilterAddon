@@ -9,27 +9,39 @@ namespace ProfanityFilterAddon {
     /// Requires manual registration in your mod initialization.
     /// </summary>
     public class HKMPAddon : ServerAddon {
+        /// <inheritdoc />
         protected override string Name => "Profanity Filter";
+        
+        /// <inheritdoc />
         protected override string Version => "1.0.0";
+        
+        /// <inheritdoc />
         public override bool NeedsNetwork => false;
 
+        /// <inheritdoc />
         public override void Initialize(IServerApi serverApi) {
             Logger.Info("[ProfanityFilterAddon] HKMP Addon initialized.");
             serverApi.ServerManager.PlayerChatEvent += OnPlayerChat;
         }
 
+        /// <summary>
+        /// Event handler for player chat messages.
+        /// Filters profanity from the message content.
+        /// </summary>
+        /// <param name="chatEvent">The chat event arguments.</param>
         private void OnPlayerChat(IPlayerChatEvent chatEvent) {
             var original = chatEvent.Message;
             var sanitized = ProfanityFilter.Sanitize(original);
             
             if (!string.Equals(sanitized, original, StringComparison.Ordinal)) {
                 chatEvent.Message = sanitized;
-                Logger.Info("[ProfanityAddon] Filtered message.");
+                Logger.Info("[ProfanityFilterAddon] Filtered message.");
             }
         }
 
         /// <summary>
-        /// Call this from your HKMP mod initialization to register this addon.
+        /// Registers the addon with the HKMP server.
+        /// Call this method during your mod's initialization phase.
         /// </summary>
         public static void Register() {
             RegisterAddon(new HKMPAddon());
