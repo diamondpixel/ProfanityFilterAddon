@@ -38,7 +38,7 @@ I am planning to introduce a **Transformer-based Language Model (LLM)** in futur
 ## 📥 Installation
 
 1. Download the latest release from the [Releases Page](https://github.com/diamondpixel/ProfanityFilterAddon/releases).
-2. Place the `ProfanityFilterAddon.dll` into your server's `plugins` folder or install with Lumafly for HollowKnight.
+2. Place the `ProfanityFilterAddon.dll` next to your server's / mod's file or install with Lumafly for HollowKnight.
 3. Restart the server.
 
 ## 🛠️ Configuration
