@@ -6,6 +6,7 @@
         <AssemblyName>ProfanityFilterAddon</AssemblyName>
         <RootNamespace>ProfanityFilterAddon</RootNamespace>
         <OutputPath>..\bin\ProfanityFilter.Mod\</OutputPath>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
