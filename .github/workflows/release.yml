@@ -30,12 +30,12 @@ jobs:
     - name: Create HKMP Zip
       run: |
         cd ProfanityFilterAddon/bin/Release/net472
-        powershell Compress-Archive -Path * -DestinationPath ..\..\..\..\ProfanityFilterAddon-HKMP.zip
+        powershell Compress-Archive -Path ProfanityFilterAddon.dll,ProfanityFilterAddon.xml -DestinationPath ..\..\..\..\ProfanityFilterAddon-HKMP.zip
 
     - name: Create SSMP Zip
       run: |
         cd ProfanityFilterAddon/bin/Release/netstandard2.1
-        powershell Compress-Archive -Path * -DestinationPath ..\..\..\..\ProfanityFilterAddon-SSMP.zip
+        powershell Compress-Archive -Path ProfanityFilterAddon.dll,ProfanityFilterAddon.xml -DestinationPath ..\..\..\..\ProfanityFilterAddon-SSMP.zip
 
     - name: Create Release
       uses: softprops/action-gh-release@v1

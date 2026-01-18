@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <AssemblyName>ProfanityFilterAddon</AssemblyName>
         <RootNamespace>ProfanityFilterAddon</RootNamespace>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
