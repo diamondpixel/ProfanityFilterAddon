@@ -52,5 +52,32 @@ __pycache__/
 # OS X
 .DS_Store
 
-# Don't ignore DLLs in lib folder
+# Binary files
+*.dll
+*.pdb
+*.mdb
+
+# Keep libs
 !lib/**
+
+# Compressed archives
+*.zip
+*.7z
+*.rar
+*.tar.gz
+
+# Logs
+*.log
+build_detailed.log
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# Rider / JetBrains Additional
+*.DotSettings.user
+*.rdproj
+
+# Test Results
+TestResults/

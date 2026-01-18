@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <AssemblyName>ProfanityFilterAddon</AssemblyName>
+        <RootNamespace>ProfanityFilterAddon</RootNamespace>
+        <OutputPath>..\bin\ProfanityFilter.Mod\</OutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ProfanityFilter.Core\ProfanityFilter.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+        <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.20.1" />
+        <PackageReference Include="ILRepack" Version="2.0.34" GeneratePathProperty="true" />
+    </ItemGroup>
+
+    <!-- Game References -->
+    <ItemGroup>
+        <Reference Include="Assembly-CSharp">
+            <HintPath>..\lib\Game\Assembly-CSharp.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="HKMP">
+            <HintPath>..\lib\HKMP\HKMP.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>..\lib\Game\UnityEngine.CoreModule.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <Target Name="ILRepack" AfterTargets="Build">
+        <PropertyGroup>
+            <WorkingDirectory>$(OutputPath)</WorkingDirectory>
+        </PropertyGroup>
+        <ItemGroup>
+            <InputAssemblies Include="ProfanityFilterAddon.dll" />
+            <InputAssemblies Include="ProfanityFilterAddon.Core.dll" />
+        </ItemGroup>
+        <Exec Command="$(PkgILRepack)\tools\ILRepack.exe /parallel /internalize /out:ProfanityFilterAddon.dll @(InputAssemblies, ' ')" WorkingDirectory="$(WorkingDirectory)" />
+    </Target>
+</Project>

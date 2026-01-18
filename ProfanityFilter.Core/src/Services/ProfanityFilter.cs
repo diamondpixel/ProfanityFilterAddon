@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 
-namespace ProfanityFilterAddon {
+namespace ProfanityFilterAddon.Services {
     /// <summary>
     /// High-performance rule-based profanity filter with leet speak normalization and phrase detection.
     /// Uses word lists from embedded JSON resource for content moderation.
@@ -25,27 +25,27 @@ namespace ProfanityFilterAddon {
         /// <summary>
         /// Set of profanity words to detect (case-insensitive).
         /// </summary>
-        private static HashSet<string> _profanityWords = new();
+        private static HashSet<string> _profanityWords = [];
         
         /// <summary>
         /// Set of mild words that are acceptable in certain contexts (case-insensitive).
         /// </summary>
-        private static HashSet<string> _mildOkWords = new();
+        private static HashSet<string> _mildOkWords = [];
         
         /// <summary>
         /// Set of phrases that are always acceptable even if containing profanity words (case-insensitive).
         /// </summary>
-        private static HashSet<string> _okPhrases = new();
+        private static HashSet<string> _okPhrases = [];
         
         /// <summary>
         /// Set of phrases that are always considered offensive/insulting (case-insensitive).
         /// </summary>
-        private static HashSet<string> _badPhrases = new();
+        private static HashSet<string> _badPhrases = [];
         
         /// <summary>
         /// Set of false positive words that should not trigger profanity detection (Scunthorpe problem).
         /// </summary>
-        private static HashSet<string> _falsePositives = new();
+        private static HashSet<string> _falsePositives = [];
         
         /// <summary>
         /// Mapping of leet speak characters to their normalized equivalents (e.g., '3' -> 'e').
@@ -170,7 +170,7 @@ namespace ProfanityFilterAddon {
         /// <returns>Normalized text with leet speak converted to standard characters.</returns>
         private static string NormalizeLeet(string text) {
             var chars = text.ToCharArray();
-            for (int i = 0; i < chars.Length; i++) {
+            for (var i = 0; i < chars.Length; i++) {
                 var c = char.ToLowerInvariant(chars[i]);
                 if (_leetMap.TryGetValue(c, out var normalized)) {
                     chars[i] = normalized;
@@ -251,9 +251,14 @@ namespace ProfanityFilterAddon {
             foreach (var word in allWords) {
                 if (word.Length < 3) continue;
 
-                // Exact match
+                // Exact match - severe profanity
                 if (_profanityWords.Contains(word)) {
                     return (true, 0.85, $"Profanity: {word}");
+                }
+                
+                // Mild words - flagged with lower severity (won't be censored by default)
+                if (_mildOkWords.Contains(word)) {
+                    return (true, 0.40, $"Mild: {word}");
                 }
 
                 // Compound word detection (min length 5)

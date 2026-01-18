@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net472;netstandard2.1</TargetFrameworks>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <AssemblyName>ProfanityFilterAddon.Core</AssemblyName>
+        <RootNamespace>ProfanityFilterAddon</RootNamespace>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <OutputPath>..\bin\ProfanityFilter.Core\</OutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+        <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.20.1" />
+    </ItemGroup>
+
+    <!-- HKMP reference (net472) -->
+    <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
+        <Reference Include="HKMP">
+            <HintPath>..\lib\HKMP\HKMP.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <!-- SSMP reference (netstandard2.1) -->
+    <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+        <Reference Include="SSMP">
+            <HintPath>..\lib\SSMP\SSMP.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="src\Resource\profanity_filter.json">
+        <LogicalName>ProfanityFilterAddon.profanity_filter.json</LogicalName>
+        <Link>src\Resource\profanity_filter.json</Link>
+      </EmbeddedResource>
+    </ItemGroup>
+</Project>
