@@ -6,7 +6,6 @@ using Hkmp.Api.Eventing.ServerEvents;
 namespace ProfanityFilterAddon {
     /// <summary>
     /// Profanity Filter addon for HKMP.
-    /// Requires manual registration in your mod initialization.
     /// </summary>
     public class HKMPAddon : ServerAddon {
         /// <inheritdoc />
@@ -37,14 +36,6 @@ namespace ProfanityFilterAddon {
                 chatEvent.Message = sanitized;
                 Logger.Info("[ProfanityFilterAddon] Filtered message.");
             }
-        }
-
-        /// <summary>
-        /// Registers the addon with the HKMP server.
-        /// Call this method during your mod's initialization phase.
-        /// </summary>
-        public static void Register() {
-            RegisterAddon(new HKMPAddon());
         }
     }
 }
