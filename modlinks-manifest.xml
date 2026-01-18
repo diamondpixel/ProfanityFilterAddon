@@ -4,7 +4,7 @@
     <Description>Server-side profanity filter addon for HKMP and SSMP. currently uses a high-performance rule-based filtering engine.</Description>
     <Version>1.0.0.0</Version>
     <Link SHA256="8500FD542C883739A595089CD352E3F2C6090076FEE6210498DD8E19796965C92">
-        <![CDATA[https://github.com/diamondpixel/ProfanityFilterAddon/releases/download/v1.0.0/ProfanityFilterAddon.zip]]>
+        <![CDATA[https://github.com/diamondpixel/ProfanityFilterAddon/releases/download/v1.0.0/ProfanityFilterAddon-HKMP.zip]]>
     </Link>
     <Dependencies>
         <Dependency>HKMP</Dependency>

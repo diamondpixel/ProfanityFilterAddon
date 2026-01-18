@@ -27,16 +27,23 @@ jobs:
     - name: Build
       run: dotnet build ProfanityFilterAddon/ProfanityFilterAddon.csproj --configuration Release
 
-    - name: Create Zip Archive
+    - name: Create HKMP Zip
       run: |
-        cd ProfanityFilterAddon/bin/Release
-        powershell Compress-Archive -Path * -DestinationPath ..\..\..\ProfanityFilterAddon.zip
+        cd ProfanityFilterAddon/bin/Release/net472
+        powershell Compress-Archive -Path * -DestinationPath ..\..\..\..\ProfanityFilterAddon-HKMP.zip
+
+    - name: Create SSMP Zip
+      run: |
+        cd ProfanityFilterAddon/bin/Release/netstandard2.1
+        powershell Compress-Archive -Path * -DestinationPath ..\..\..\..\ProfanityFilterAddon-SSMP.zip
 
     - name: Create Release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
       with:
-        files: ProfanityFilterAddon.zip
+        files: |
+          ProfanityFilterAddon-HKMP.zip
+          ProfanityFilterAddon-SSMP.zip
         tag_name: ${{ github.event.inputs.tag_name }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
